@@ -19,28 +19,13 @@
 // Created by Marcel Kulina on 02/11/2019.
 // Copyright (c) 2019 Broken Bytes All rights reserved.
 //
-
-#ifndef SHATNET_WIN32SOCKET_HXX
-#define SHATNET_WIN32SOCKET_HXX
-#include <WinSock2.h>
-
-#include "../Socket.hxx"
+#ifndef SHATNET_NETWORK_HXX
+#define SHATNET_NETWORK_HXX
 
 
-namespace ShatNet::Windows {
-	class Win32Socket : public Socket {
-	public:
-		Win32Socket(AddrInfo addrinfo);
-		void Send(AddrInfo addrinfo, char data[]) override;
-		void Close() override;
+class Network {
 
-	private:
-		int _socket;
-		addrinfo _addrInfo;
+};
 
-		void Bind() override;
-		void StartRead() override;
-	};
-}
 
-#endif //SHATNET_WIN32SOCKET_HXX
+#endif //SHATNET_NETWORK_HXX
